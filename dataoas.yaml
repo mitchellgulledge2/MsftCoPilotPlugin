@@ -4,7 +4,7 @@ info:
   version: 1.0.0
   title: Netskope API
 paths:
-  /api/v2/events/data/alert:
+  /data/alert:
     x-netskope-params:
       serviceConfig: queryservice
       version: 2
@@ -128,7 +128,7 @@ paths:
                 $ref: '#/components/schemas/400'
       tags:
         - events
-  /api/v2/events/data/application:
+  /data/application:
     x-netskope-params:
       serviceConfig: queryservice
       version: 2
@@ -221,7 +221,7 @@ paths:
                 $ref: '#/components/schemas/400'
       tags:
         - events
-  /api/v2/events/data/audit:
+  /data/audit:
     x-netskope-params:
       serviceConfig: queryservice
       version: 2
@@ -315,7 +315,7 @@ paths:
       tags:
         - events
 
-  /api/v2/events/data/infrastructure:
+  /data/infrastructure:
     x-netskope-params:
       serviceConfig: queryservice
       version: 2
@@ -408,7 +408,7 @@ paths:
                 $ref: '#/components/schemas/400'
       tags:
         - events
-  /api/v2/events/data/network:
+  /data/network:
     x-netskope-params:
       serviceConfig: queryservice
       version: 2
@@ -501,7 +501,7 @@ paths:
                 $ref: '#/components/schemas/400'
       tags:
         - events
-  /api/v2/events/data/page:
+  /data/page:
     x-netskope-params:
       serviceConfig: queryservice
       version: 2
