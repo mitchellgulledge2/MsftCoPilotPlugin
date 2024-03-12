@@ -1,7 +1,7 @@
 Descriptor:
-  Name: Netskope Rest API Plugin
-  DisplayName: Netskope Dataexport Reporting endpoints 
-  Description: The API plugin offers a wide array of endpoint functionalities, including displaying alerts, managing incidents, and tracking infrastructure and network events. With support for DLP alerts, malware alerts, and security assessment events, it provides comprehensive monitoring and management capabilities in a concise package. 
+  Name: Netskope Reporting for Threat and Data Protection
+  DisplayName: Netskope Reporting API endpoints 
+  Description: The API plugin offers 6 skills that range from displaying Netskope Alerts and Events for Threat Hunting and Data Protection. 
   SupportedAuthTypes:
     - ApiKey
   Authorization:
