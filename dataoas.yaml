@@ -19,7 +19,10 @@ paths:
         #ExamplePrompts Show me all the Netskope Alerts for last 3 days.
         #ExamplePrompts Show me the Netskope Alerts for Monday Oct 23 UTC for uba.
         #ExamplePrompts Show me all Netskope Malware Alerts for the last week.
-      
+        #ExamplePrompts Show me all Netskope Compromised Credential Alerts for the last 3 days.
+        #ExamplePrompts Show me all Netskope Compromised Credential Alerts for last 24 hours.
+        #ExamplePrompts Show me all Netskope Compromised Credential Alerts for last 24 hours with user exampleUser@netskope.com.
+
       parameters:
         - name: type
           in: query
@@ -63,7 +66,7 @@ paths:
             type: integer
             minimum: 0
             maximum: 5000
-            default: 5000
+            default: 100
         - name: offset
           in: query
           required: true
@@ -156,7 +159,7 @@ paths:
             type: integer
             minimum: 0
             maximum: 5000
-            default: 5000
+            default: 100
         - name: offset
           in: query
           required: false
@@ -249,7 +252,7 @@ paths:
             type: integer
             minimum: 0
             maximum: 5000
-            default: 5000
+            default: 100
         - name: offset
           in: query
           required: false
@@ -343,7 +346,7 @@ paths:
             type: integer
             minimum: 0
             maximum: 5000
-            default: 5000
+            default: 100
         - name: offset
           in: query
           required: false
@@ -436,7 +439,7 @@ paths:
             type: integer
             minimum: 0
             maximum: 5000
-            default: 5000
+            default: 100
         - name: offset
           in: query
           required: false
@@ -529,7 +532,7 @@ paths:
             type: integer
             minimum: 0
             maximum: 5000
-            default: 5000
+            default: 100
         - name: offset
           in: query
           required: false
