@@ -52,12 +52,7 @@ paths:
             enum:
               - 'true'
               - 'false'
-        - name: query
-          in: query
-          required: false
-          description: Advanced filter for retrieving alerts
-          schema:
-            type: string
+
         - name: limit
           in: query
           required: true
@@ -145,12 +140,6 @@ paths:
         #ExamplePrompts Show me all the Netskope Application Events for last 3 days.
         #ExamplePrompts Show me the Netskope Application Events for Monday Oct 23 UTC.
       parameters:
-        - name: query
-          in: query
-          required: false
-          description: Advanced filter for retrieving application events
-          schema:
-            type: string
         - name: limit
           in: query
           required: false
@@ -238,12 +227,6 @@ paths:
         #ExamplePrompts Show me all the Netskope Audit Events for last 3 days.
         #ExamplePrompts Show me the Netskope Audit Events for Monday Oct 23 UTC.
       parameters:
-        - name: query
-          in: query
-          required: true
-          description: Advanced filter for retrieving audit events
-          schema:
-            type: string
         - name: limit
           in: query
           required: true
@@ -332,12 +315,6 @@ paths:
         #ExamplePrompts Show me all the Netskope Infrastructure Events for last 3 days.
         #ExamplePrompts Show me the Netskope Infrastructure Events for Monday Oct 23 UTC.
       parameters:
-        - name: query
-          in: query
-          required: false
-          description: Advanced filter for retrieving infrastructure events
-          schema:
-            type: string
         - name: limit
           in: query
           required: false
@@ -425,12 +402,6 @@ paths:
         #ExamplePrompts Show me all the Netskope Network Events for last 3 days.
         #ExamplePrompts Show me the Netskope Network Events for Monday Oct 23 UTC.
       parameters:
-        - name: query
-          in: query
-          required: false
-          description: Advanced filter for retrieving network events
-          schema:
-            type: string
         - name: limit
           in: query
           required: false
@@ -518,12 +489,6 @@ paths:
         #ExamplePrompts Show me all the Netskope Page Events for last 3 days.
         #ExamplePrompts Show me the Netskope Page Events for Monday Oct 23 UTC.
       parameters:
-        - name: query
-          in: query
-          required: false
-          description: Advanced filter for retrieving page events
-          schema:
-            type: string
         - name: limit
           in: query
           required: false
