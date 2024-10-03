@@ -14,5 +14,5 @@ Descriptor:
 SkillGroups:
   - Format: API
     Settings:
-      OpenApiSpecUrl: https://raw.githubusercontent.com/mitchellgulledge2/MsftCoPilotPlugin/main/dataoas.yaml
+      OpenApiSpecUrl: https://raw.githubusercontent.com/mitchellgulledge2/MsftCoPilotPlugin/refs/heads/main/oas_ga.yaml
       EndpointUrl: "https://<insert_tenant_here>.goskope.com/api/v2/events"
