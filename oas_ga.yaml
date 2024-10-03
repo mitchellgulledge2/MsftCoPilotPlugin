@@ -72,7 +72,7 @@ paths:
         - description: Unix timestamp of start time period of alerts
           in: query
           name: starttime
-          required: false
+          required: true
           schema:
             default: 0
             minimum: 0
@@ -80,7 +80,7 @@ paths:
         - description: Unix timestamp of end time period of alerts
           in: query
           name: endtime
-          required: false
+          required: true
           schema:
             minimum: 0
             type: integer
@@ -92,7 +92,7 @@ paths:
             insertionstarttime/insertionendtime.
           in: query
           name: insertionstarttime
-          required: false
+          required: true
           schema:
             default: 0
             minimum: 0
@@ -103,7 +103,7 @@ paths:
             is not passed.
           in: query
           name: insertionendtime
-          required: false
+          required: true
           schema:
             minimum: 0
             type: integer
@@ -177,7 +177,7 @@ paths:
         - description: Unix timestamp of start time period of alerts
           in: query
           name: starttime
-          required: false
+          required: true
           schema:
             default: 0
             minimum: 0
@@ -185,7 +185,7 @@ paths:
         - description: Unix timestamp of end time period of alerts
           in: query
           name: endtime
-          required: false
+          required: true
           schema:
             minimum: 0
             type: integer
@@ -197,7 +197,7 @@ paths:
             insertionstarttime/insertionendtime.
           in: query
           name: insertionstarttime
-          required: false
+          required: true
           schema:
             default: 0
             minimum: 0
@@ -208,7 +208,7 @@ paths:
             is not passed.
           in: query
           name: insertionendtime
-          required: false
+          required: true
           schema:
             minimum: 0
             type: integer
@@ -282,7 +282,7 @@ paths:
         - description: Unix timestamp of start time period of alerts
           in: query
           name: starttime
-          required: false
+          required: true
           schema:
             default: 0
             minimum: 0
@@ -290,7 +290,7 @@ paths:
         - description: Unix timestamp of end time period of alerts
           in: query
           name: endtime
-          required: false
+          required: true
           schema:
             minimum: 0
             type: integer
@@ -302,7 +302,7 @@ paths:
             insertionstarttime/insertionendtime.
           in: query
           name: insertionstarttime
-          required: false
+          required: true
           schema:
             default: 0
             minimum: 0
@@ -313,7 +313,7 @@ paths:
             is not passed.
           in: query
           name: insertionendtime
-          required: false
+          required: true
           schema:
             minimum: 0
             type: integer
@@ -387,7 +387,7 @@ paths:
         - description: Unix timestamp of start time period of alerts
           in: query
           name: starttime
-          required: false
+          required: true
           schema:
             default: 0
             minimum: 0
@@ -395,7 +395,7 @@ paths:
         - description: Unix timestamp of end time period of alerts
           in: query
           name: endtime
-          required: false
+          required: true
           schema:
             minimum: 0
             type: integer
@@ -407,7 +407,7 @@ paths:
             insertionstarttime/insertionendtime.
           in: query
           name: insertionstarttime
-          required: false
+          required: true
           schema:
             default: 0
             minimum: 0
@@ -418,7 +418,7 @@ paths:
             is not passed.
           in: query
           name: insertionendtime
-          required: false
+          required: true
           schema:
             minimum: 0
             type: integer
@@ -492,7 +492,7 @@ paths:
         - description: Unix timestamp of start time period of alerts
           in: query
           name: starttime
-          required: false
+          required: true
           schema:
             default: 0
             minimum: 0
@@ -500,7 +500,7 @@ paths:
         - description: Unix timestamp of end time period of alerts
           in: query
           name: endtime
-          required: false
+          required: true
           schema:
             minimum: 0
             type: integer
@@ -512,7 +512,7 @@ paths:
             insertionstarttime/insertionendtime.
           in: query
           name: insertionstarttime
-          required: false
+          required: true
           schema:
             default: 0
             minimum: 0
@@ -523,7 +523,7 @@ paths:
             is not passed.
           in: query
           name: insertionendtime
-          required: false
+          required: true
           schema:
             minimum: 0
             type: integer
