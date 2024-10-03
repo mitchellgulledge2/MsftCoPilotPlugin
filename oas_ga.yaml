@@ -6,7 +6,7 @@ info:
 paths:
   /api/v2/events/data/alert:
     get:
-      operationId: getNetskopeAlerts
+      operationId: lookupNetskopeAlerts
       displayName: Lookup Netskope Alerts
       summary: Lookup and summarize information about a set of Netskope Alerts
       description: >-
@@ -247,7 +247,7 @@ paths:
       version: 2
   /api/v2/events/data/audit:
     get:
-      operationId: lookup Audit events from Netskope 
+      operationId: lookupNetskopeAuditEvents 
       displayName: Lookup Netskope Audit Events
       summary: Lookup Netskope Audit Events from your Netskope Tenant
       description: >-
