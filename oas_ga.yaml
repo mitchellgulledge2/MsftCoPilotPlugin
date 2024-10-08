@@ -54,10 +54,10 @@ paths:
         - description: Max number of records to retrieve
           in: query
           name: limit
-          required: false
+          required: true
           schema:
-            default: 5000
-            maximum: 5000
+            default: 20
+            maximum: 20
             minimum: 0
             type: integer
         - description: Used to shift the window of alerts if limit is reached
@@ -154,8 +154,8 @@ paths:
           name: limit
           required: false
           schema:
-            default: 5000
-            maximum: 5000
+            default: 20
+            maximum: 20
             minimum: 0
             type: integer
         - description: Used to shift the window of alerts if limit is reached
@@ -252,8 +252,8 @@ paths:
           name: limit
           required: false
           schema:
-            default: 5000
-            maximum: 5000
+            default: 20
+            maximum: 20
             minimum: 0
             type: integer
         - description: Used to shift the window of alerts if limit is reached
@@ -350,8 +350,8 @@ paths:
           name: limit
           required: false
           schema:
-            default: 5000
-            maximum: 5000
+            default: 20
+            maximum: 20
             minimum: 0
             type: integer
         - description: Used to shift the window of alerts if limit is reached
@@ -448,8 +448,8 @@ paths:
           name: limit
           required: false
           schema:
-            default: 5000
-            maximum: 5000
+            default: 20
+            maximum: 20
             minimum: 0
             type: integer
         - description: Used to shift the window of alerts if limit is reached
