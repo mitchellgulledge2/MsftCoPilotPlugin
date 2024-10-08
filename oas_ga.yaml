@@ -84,11 +84,7 @@ paths:
             minimum: 0
             type: integer
         - description: >-
-            Restrict alerts which have been inserted into the database after the
-            specified time. Needed only if timeperiod or starttime/endtime is
-            not passed. Only use one of these parameters at a time, not a
-            combination: timeperiod, or starttime/endtime, or
-            insertionstarttime/insertionendtime.
+            Restrict alerts which have been inserted into the database after the specified time. Always same as starttime.
           in: query
           name: insertionstarttime
           required: true
@@ -97,9 +93,7 @@ paths:
             minimum: 0
             type: integer
         - description: >-
-            Restrict alerts which have been inserted into the database before
-            the specified time. Needed only if timeperiod or starttime/endtime
-            is not passed.
+            Restrict alerts which have been inserted into the database before the specified time. Always same as endtime.
           in: query
           name: insertionendtime
           required: true
@@ -188,11 +182,7 @@ paths:
             minimum: 0
             type: integer
         - description: >-
-            Restrict alerts which have been inserted into the database after the
-            specified time. Needed only if timeperiod or starttime/endtime is
-            not passed. Only use one of these parameters at a time, not a
-            combination: timeperiod, or starttime/endtime, or
-            insertionstarttime/insertionendtime.
+            Restrict alerts which have been inserted into the database after the specified time. Always same as starttime.
           in: query
           name: insertionstarttime
           required: true
@@ -201,9 +191,7 @@ paths:
             minimum: 0
             type: integer
         - description: >-
-            Restrict alerts which have been inserted into the database before
-            the specified time. Needed only if timeperiod or starttime/endtime
-            is not passed.
+            Restrict alerts which have been inserted into the database before the specified time. Always same as endtime.
           in: query
           name: insertionendtime
           required: true
@@ -292,11 +280,7 @@ paths:
             minimum: 0
             type: integer
         - description: >-
-            Restrict alerts which have been inserted into the database after the
-            specified time. Needed only if timeperiod or starttime/endtime is
-            not passed. Only use one of these parameters at a time, not a
-            combination: timeperiod, or starttime/endtime, or
-            insertionstarttime/insertionendtime.
+            Restrict alerts which have been inserted into the database after the specified time. Always same as starttime.
           in: query
           name: insertionstarttime
           required: true
@@ -305,9 +289,7 @@ paths:
             minimum: 0
             type: integer
         - description: >-
-            Restrict alerts which have been inserted into the database before
-            the specified time. Needed only if timeperiod or starttime/endtime
-            is not passed.
+            Restrict alerts which have been inserted into the database before the specified time. Always same as endtime.
           in: query
           name: insertionendtime
           required: true
@@ -396,11 +378,7 @@ paths:
             minimum: 0
             type: integer
         - description: >-
-            Restrict alerts which have been inserted into the database after the
-            specified time. Needed only if timeperiod or starttime/endtime is
-            not passed. Only use one of these parameters at a time, not a
-            combination: timeperiod, or starttime/endtime, or
-            insertionstarttime/insertionendtime.
+            Restrict alerts which have been inserted into the database after the specified time. Always same as starttime.
           in: query
           name: insertionstarttime
           required: true
@@ -409,9 +387,7 @@ paths:
             minimum: 0
             type: integer
         - description: >-
-            Restrict alerts which have been inserted into the database before
-            the specified time. Needed only if timeperiod or starttime/endtime
-            is not passed.
+            Restrict alerts which have been inserted into the database before the specified time. Always same as endtime.
           in: query
           name: insertionendtime
           required: true
@@ -500,11 +476,7 @@ paths:
             minimum: 0
             type: integer
         - description: >-
-            Restrict alerts which have been inserted into the database after the
-            specified time. Needed only if timeperiod or starttime/endtime is
-            not passed. Only use one of these parameters at a time, not a
-            combination: timeperiod, or starttime/endtime, or
-            insertionstarttime/insertionendtime.
+            Restrict alerts which have been inserted into the database after the specified time. Always same as starttime.
           in: query
           name: insertionstarttime
           required: true
@@ -513,9 +485,7 @@ paths:
             minimum: 0
             type: integer
         - description: >-
-            Restrict alerts which have been inserted into the database before
-            the specified time. Needed only if timeperiod or starttime/endtime
-            is not passed.
+            Restrict alerts which have been inserted into the database before the specified time. Always same as endtime.
           in: query
           name: insertionendtime
           required: true
