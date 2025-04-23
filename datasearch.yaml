@@ -1,0 +1,123 @@
+openapi: 3.0.1
+info:
+  description: Netskope Alerts Datasearch Endpoint
+  version: 1.0.0
+  title: Netskope Alerts API
+paths:  
+  /api/v2/events/datasearch/alert:
+    get:
+      description: |2-
+         Get alert events with the ability to filter the output based on attribute parameters. <br><br> This endpoint is intended to be used for ad-hoc query and allows users to get the alert events in the system by providing various parameters in the request. Users can use this endpoint to filter and retrieve all and/or specific alert events based on criteria like alert_name, alert_type, time range and other relevant metadata. <br><br>
+        For example, to filter alerts to only show total count of alerts for a specific duration: `?starttime=1731535136&endtime=1736805536&fields=count_total:count(id)` <br> You can also filter on multiple attributes by adding an `and` logical operator and another attribute in the same format as the previous example. For example, to show total alert count for app equals Facebook: `?query=app eq 'Facebook' and alert_type eq 'policy'`<br><br>
+        Additional examples can be found here: <https://docs.netskope.com/en/skope-it-query-language-search-examples/> <br><br>
+        For SIEM ingestion, please consider using the `api/v2/dataexport` endpoints which are explained here: <https://docs.netskope.com/en/using-the-rest-api-v2-dataexport-iterator-endpoints/> 
+        #ExamplePrompts Show me all the Netskope Alerts for last 90 days for DLP.
+        #ExamplePrompts Show me all the Netskope Alerts for last 3 days.
+        #ExamplePrompts Show me the Netskope Alerts for Monday Oct 23 UTC for uba.
+        #ExamplePrompts Show me all Netskope Malware Alerts for the last week.
+        #ExamplePrompts Show me all Netskope Compromised Credential Alerts for the last 3 days.
+        #ExamplePrompts Show me all Netskope Compromised Credential Alerts for last 24 hours.
+        #ExamplePrompts Show me all Netskope Compromised Credential Alerts for last 24 hours with user exampleUser@netskope.com.
+      parameters:
+        - description: Query timeout, in seconds
+          in: query
+          name: timeout
+          required: true
+          schema:
+            default: 180
+            type: integer
+        - description: JQL query to filter the alerts by
+          in: query
+          name: query
+          schema:
+            type: string
+        - description: Start time, in Unix timestamp, of the desired alerts
+          in: query
+          name: starttime
+          schema:
+            type: integer
+        - description: End time, in Unix timestamp, of the desired alerts
+          in: query
+          name: endtime
+          schema:
+            type: integer
+        - description: Query offset
+          in: query
+          name: offset
+          schema:
+            type: integer
+        - description: Number of results to limit the output by
+          in: query
+          name: limit
+          schema:
+            default: 20
+            type: integer
+        - description: Number of results to limit the sub-aggregations by
+          in: query
+          name: sublimit
+          schema:
+            type: integer
+        - description: Fields to aggregate on
+          in: query
+          name: groupbys
+          schema:
+            items:
+              type: string
+            type: array
+        - description: Secondary fields to aggregate on
+          in: query
+          name: subgroupbys
+          schema:
+            items:
+              type: string
+            type: array
+        - description: Fields to sort the results by
+          in: query
+          name: orderbys
+          schema:
+            items:
+              type: string
+            type: array
+        - description: Names of the columns whose values want to be retrieved in results.
+          in: query
+          name: fields
+          schema:
+            type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AlertEventResponse'
+          description: Successful Operation
+        '400':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequest'
+          description: Bad Request
+        '429':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+          description: Too Many Requests
+      summary: Get alert events.
+components:
+  schemas:
+    '200':
+      description: successful operation
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+    '400':
+      description: Bad request response
+      type: object
+      properties:
+        message:
+          type: string
+          example: Bad request
+
+
