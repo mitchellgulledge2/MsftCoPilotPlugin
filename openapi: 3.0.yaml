@@ -1,0 +1,76 @@
+openapi: 3.0.1
+info:
+  description: Netskope Risk Score for Users
+  version: 1.0.0
+  title: Netskope UCI API
+paths:  
+  /api/v2/incidents/users/getuci:
+    post:
+      parameters:
+        - description: The statistics information about user rating rank will be returned if it is true
+          in: query
+          name: statistics
+          required: false
+          schema:
+            default: true
+            enum:
+              - true
+              - false
+            type: boolean
+        - description: The zero-based offset of the first item in the list to retrieve (min 0)
+          in: query
+          name: offset
+          required: false
+          schema:
+            default: 0
+            minimum: 0
+            type: integer
+        - description: Max number of items to retrieve (min 1, max 10000).
+          in: query
+          name: limit
+          required: false
+          schema:
+            default: 1000
+            maximum: 10000
+            minimum: 1
+            type: integer
+        - description: The field for sorting. It should be one of ['user', 'start', 'confidenceScore']. The default value is 'confidenceScore'
+          in: query
+          name: sortby
+          required: false
+          schema:
+            default: confidenceScore
+            enum:
+              - user
+              - start
+              - confidenceScore
+            type: string
+        - description: Sorting order. It should be one of ['asc', 'desc']. The default value is 'asc'
+          in: query
+          name: sortorder
+          required: false
+          schema:
+            default: asc
+            enum:
+              - asc
+              - desc
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserUciSearchRequest'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserCurrentUciResponse'
+          description: successful request
+        '400':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorInfo'
+          description: invalid request
